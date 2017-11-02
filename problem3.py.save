@@ -1,0 +1,26 @@
+import random
+
+
+
+
+print("Please write a number down 0 between 1000")
+
+
+secret = random.randint(0,1000)
+
+print(secret)
+
+guess = input("is this it higher or lower\n:")
+
+if(guess == "yes"):
+	print("I found it!!")
+
+secret = random.randint(0,1000)
+
+while(guess == "no"):
+	print(secret)
+	secret = random.randint(0,guess)
+	guess = input("Is this it higher or lower\n:")
+
+if(guess == ""):
+	print("I found it!!")
